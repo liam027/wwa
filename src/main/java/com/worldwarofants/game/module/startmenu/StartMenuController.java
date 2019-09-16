@@ -2,6 +2,7 @@ package com.worldwarofants.game.module.startmenu;
 
 import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.module.IModuleNavigator;
+import com.worldwarofants.game.module.ModuleName;
 
 public class StartMenuController extends AbstractController<StartMenuView> {
 
@@ -13,19 +14,8 @@ public class StartMenuController extends AbstractController<StartMenuView> {
 		view.renderStartMenuScreen();
 	}
 
-	public void showGameOptions() {
-		// TODO show game options
-	}
-
-	public void startScouting() {
-		// TODO navigate to scouting module
-	}
-
-	public void startCombat() {
-		// TODO navigate to combat module
-	}
-	
-	public void startColonyManagement() {
-		//TODO navigate to colony management module
+	public void navigateToNewGameModule() {
+		String[] args = new String[0];
+		moduleNavigator.navigateTo(ModuleName.NEW_GAME, args);
 	}
 }

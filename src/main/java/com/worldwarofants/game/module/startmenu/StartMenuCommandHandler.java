@@ -7,10 +7,7 @@ import com.worldwarofants.game.arch.console.command.ICommand;
 
 public class StartMenuCommandHandler extends AbstractCommandHandler<StartMenuController> {
 	public static final String COMMAND_SHOW_GAME_SCREEN = "showGameScreen"; 
-	public static final String COMMAND_SHOW_GAME_OPTIONS = "showGameOptions";
-	public static final String COMMAND_START_SCOUTING = "scout";
-	public static final String COMMAND_START_COMBAT = "combat";
-	public static final String COMMAND_START_COLONY_MANAGEMENT = "manageColony";
+	public static final String COMMAND_NEW_GAME = "newGame";
 	
 	public StartMenuCommandHandler(StartMenuController controller) {
 		super(controller);
@@ -19,10 +16,7 @@ public class StartMenuCommandHandler extends AbstractCommandHandler<StartMenuCon
 	@Override
 	protected void defineCommands(Map<String, ICommand<StartMenuController>> commands) {
 		commands.put(COMMAND_SHOW_GAME_SCREEN, (controller, args) -> controller.showStartMenu());
-		commands.put(COMMAND_SHOW_GAME_OPTIONS, (controller, args) -> controller.showGameOptions());
-		commands.put(COMMAND_START_SCOUTING, (controller, args) -> controller.startScouting());
-		commands.put(COMMAND_START_COMBAT, (controller, args) -> controller.startCombat());
-		commands.put(COMMAND_START_COLONY_MANAGEMENT, (controller, args) -> controller.startColonyManagement());
+		commands.put(COMMAND_NEW_GAME, (controller, args) -> controller.navigateToNewGameModule());
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class NewGameCommandHandler extends AbstractCommandHandler<NewGameControl
 
 	@Override
 	protected void defineCommands(Map<String, ICommand<NewGameController>> commands) {
-		commands.put(COMMAND_SHOW_GAME_SETUP_SCREEN, (controller, args) -> controller.showGameSetupScreen());
+		commands.put(COMMAND_SHOW_GAME_SETUP_SCREEN, (controller, args) -> controller.showNewGameScreen());
 	}
 
 	@Override

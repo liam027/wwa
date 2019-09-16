@@ -9,7 +9,7 @@ public class NewGameController extends AbstractController<NewGameView> {
 		super(view, navigator);
 	}
 
-	public void showGameSetupScreen() {
+	public void showNewGameScreen() {
 		view.renderNewGameScreen();
 	}
 

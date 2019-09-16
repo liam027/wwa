@@ -53,7 +53,7 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
      * Use this method for manual execution of commands, when you know their name,
      * and you are supplying the arguments in the code.
      */
-    public void executeCommand(String commandName, String... arguments) {
+    public void executeCommand(String commandName, String[] arguments) {
         if (commands.containsKey(commandName)) {
             commands.get(commandName).execute(controller, arguments);
         }

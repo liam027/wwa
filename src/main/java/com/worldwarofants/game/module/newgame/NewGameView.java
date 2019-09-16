@@ -9,6 +9,13 @@ public class NewGameView extends AbstractView<NewGameViewModel> {
 	}
 
 	public void renderNewGameScreen() {
-
+		line_break();
+		spell("-- GAME SETUP --");
+		line_break();
+		post("* Start Game - 'startGame'");
+		post("* Species Selection - 'Not Available'");
+		post("* Back - 'back'");
+		line_break();;
+		post("Please enter your command:");
 	}
 }

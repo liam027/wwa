@@ -48,7 +48,7 @@ public abstract class AbstractModule<CommandHandler extends AbstractCommandHandl
      *
      * @see IModuleNavigator#navigateTo(ModuleName, String[])
      */
-    public void start(String[] arguments) {
+    public void start(String... arguments) {
         commandHandler.executeStartingCommand(arguments);
     }
 

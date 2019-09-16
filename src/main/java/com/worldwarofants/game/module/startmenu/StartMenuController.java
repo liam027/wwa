@@ -15,7 +15,6 @@ public class StartMenuController extends AbstractController<StartMenuView> {
 	}
 
 	public void navigateToNewGameModule() {
-		String[] args = new String[0];
-		moduleNavigator.navigateTo(ModuleName.NEW_GAME, args);
+		moduleNavigator.navigateTo(ModuleName.NEW_GAME);
 	}
 }

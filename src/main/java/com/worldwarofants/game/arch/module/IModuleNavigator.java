@@ -21,5 +21,5 @@ public interface IModuleNavigator {
      * To achieve that, you would need to use this method inside of the ScoutingController,
      * like this: <code> navigateTo(ModuleName.COMBAT) </code>
      */
-    void navigateTo(ModuleName moduleName, String[] arguments);
+    void navigateTo(ModuleName moduleName, String... arguments);
 }

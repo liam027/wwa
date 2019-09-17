@@ -15,7 +15,8 @@ public class ConsoleOutputHandler{
             }
             catch(InterruptedException e) {
                 //if interrupted, clear the interrupt flag and continue
-                Thread.currentThread().interrupt();
+                //Thread.currentThread().interrupt();
+                e.printStackTrace();
                 
             }
         }

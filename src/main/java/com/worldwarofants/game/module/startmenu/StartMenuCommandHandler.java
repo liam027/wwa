@@ -6,8 +6,9 @@ import com.worldwarofants.game.arch.console.command.AbstractCommandHandler;
 import com.worldwarofants.game.arch.console.command.ICommand;
 
 public class StartMenuCommandHandler extends AbstractCommandHandler<StartMenuController> {
-	public static final String COMMAND_SHOW_START_MENU = "startMenu"; 
+	public static final String COMMAND_SHOW_START_MENU_SCREEN = "startMenu"; 
 	public static final String COMMAND_NEW_GAME = "newGame";
+	public static final String COMMAND_EXIT_GAME = "exit";
 	
 	public StartMenuCommandHandler(StartMenuController controller) {
 		super(controller);
@@ -15,12 +16,14 @@ public class StartMenuCommandHandler extends AbstractCommandHandler<StartMenuCon
 
 	@Override
 	protected void defineCommands(Map<String, ICommand<StartMenuController>> commands) {
+		commands.put(COMMAND_SHOW_START_MENU_SCREEN, (controller, args) -> controller.showStartMenu());
 		commands.put(COMMAND_NEW_GAME, (controller, args) -> controller.navigateToNewGameModule());
+		commands.put(COMMAND_EXIT_GAME, (controller, args) -> controller.exitGame());
 	}
 
 	@Override
 	public void executeStartingCommand(String[] arguments) {
-		executeCommand(COMMAND_SHOW_START_MENU);
+		executeCommand(COMMAND_SHOW_START_MENU_SCREEN);
 	}
 
 }

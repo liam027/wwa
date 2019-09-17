@@ -18,4 +18,8 @@ public class StartMenuController extends AbstractController<StartMenuView> {
 		String[] args = new String[0];
 		moduleNavigator.navigateTo(ModuleName.NEW_GAME, args);
 	}
+
+	public void exitGame(){
+		System.exit(0);
+	}
 }

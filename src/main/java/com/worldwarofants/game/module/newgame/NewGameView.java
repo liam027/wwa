@@ -14,7 +14,6 @@ public class NewGameView extends AbstractView<NewGameViewModel> {
 		ConsoleOutputHandler.spell("-- GAME SETUP --");
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.post("* Start Game - 'startGame'");
-		ConsoleOutputHandler.post("* Species Selection - 'Not Available'");
 		ConsoleOutputHandler.post("* Back - 'back'");
 		ConsoleOutputHandler.lineBreak();;
 		ConsoleOutputHandler.post("Please enter your command:");

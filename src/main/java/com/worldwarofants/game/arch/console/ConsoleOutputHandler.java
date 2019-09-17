@@ -14,6 +14,7 @@ public class ConsoleOutputHandler{
                 TimeUnit.MILLISECONDS.sleep(SPELL_DELAY);
             }
             catch(InterruptedException e) {
+                //if interrupted, clear the interrupt flag and continue
                 Thread.currentThread().interrupt();
                 
             }

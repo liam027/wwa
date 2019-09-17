@@ -7,7 +7,7 @@ import com.worldwarofants.game.arch.console.command.ICommand;
 
 public class StartMenuCommandHandler extends AbstractCommandHandler<StartMenuController> {
 	public static final String COMMAND_SHOW_START_MENU_SCREEN = "startMenu"; 
-	public static final String COMMAND_NEW_GAME = "newGame";
+	public static final String COMMAND_NEW_GAME = "new";
 	public static final String COMMAND_EXIT_GAME = "exit";
 	
 	public StartMenuCommandHandler(StartMenuController controller) {

@@ -13,7 +13,7 @@ public class StartMenuModule extends AbstractModule<StartMenuCommandHandler> {
 
 	@Override
 	protected StartMenuCommandHandler initDependencies() {
-		StartMenuModel viewModel = new StartMenuModel();
+		StartMenuViewModel viewModel = new StartMenuViewModel();
 		StartMenuView view = new StartMenuView(viewModel);
 		StartMenuController controller = new StartMenuController(view, navigator);
 		return new StartMenuCommandHandler(controller);

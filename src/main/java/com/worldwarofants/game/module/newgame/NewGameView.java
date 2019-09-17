@@ -1,6 +1,7 @@
 package com.worldwarofants.game.module.newgame;
 
 import com.worldwarofants.game.arch.AbstractView;
+import com.worldwarofants.game.arch.console.ConsoleOutputHandler;
 
 public class NewGameView extends AbstractView<NewGameViewModel> {
 
@@ -9,13 +10,13 @@ public class NewGameView extends AbstractView<NewGameViewModel> {
 	}
 
 	public void renderNewGameScreen() {
-		line_break();
-		spell("-- GAME SETUP --");
-		line_break();
-		post("* Start Game - 'startGame'");
-		post("* Species Selection - 'Not Available'");
-		post("* Back - 'back'");
-		line_break();;
-		post("Please enter your command:");
+		ConsoleOutputHandler.line_break();
+		ConsoleOutputHandler.spell("-- GAME SETUP --");
+		ConsoleOutputHandler.line_break();
+		ConsoleOutputHandler.post("* Start Game - 'startGame'");
+		ConsoleOutputHandler.post("* Species Selection - 'Not Available'");
+		ConsoleOutputHandler.post("* Back - 'back'");
+		ConsoleOutputHandler.line_break();;
+		ConsoleOutputHandler.post("Please enter your command:");
 	}
 }

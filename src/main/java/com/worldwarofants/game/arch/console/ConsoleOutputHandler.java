@@ -1,4 +1,4 @@
-package com.worldwarofants.game.arch.console.utils;
+package com.worldwarofants.game.arch.console;
 
 import java.util.concurrent.TimeUnit;
 

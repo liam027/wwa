@@ -23,7 +23,7 @@ public class ConsoleOutputHandler{
         System.out.println(input);   
     }
     //output a line break
-    public static void line_break(){
+    public static void lineBreak(){
         System.out.println(); 
     }
 }

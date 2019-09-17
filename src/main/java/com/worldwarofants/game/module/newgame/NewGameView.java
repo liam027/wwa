@@ -10,13 +10,13 @@ public class NewGameView extends AbstractView<NewGameViewModel> {
 	}
 
 	public void renderNewGameScreen() {
-		ConsoleOutputHandler.line_break();
+		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.spell("-- GAME SETUP --");
-		ConsoleOutputHandler.line_break();
+		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.post("* Start Game - 'startGame'");
 		ConsoleOutputHandler.post("* Species Selection - 'Not Available'");
 		ConsoleOutputHandler.post("* Back - 'back'");
-		ConsoleOutputHandler.line_break();;
+		ConsoleOutputHandler.lineBreak();;
 		ConsoleOutputHandler.post("Please enter your command:");
 	}
 }

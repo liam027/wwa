@@ -4,14 +4,14 @@ import java.util.concurrent.TimeUnit;
 
 public class ConsoleOutputHandler{
 
-    private static long spellDelay = 100;
+    private static final long SPELL_DELAY = 100;
 
     //output the provided string in one line, character by character
     public static void spell(String input){
         for(int i = 0; i < input.length(); i++){
             System.out.print(input.charAt(i));
             try{
-                TimeUnit.MILLISECONDS.sleep(spellDelay);
+                TimeUnit.MILLISECONDS.sleep(SPELL_DELAY);
             }
             catch(Exception e){
                 e.printStackTrace();

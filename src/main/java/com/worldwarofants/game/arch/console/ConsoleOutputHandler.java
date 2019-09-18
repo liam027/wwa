@@ -6,6 +6,10 @@ public class ConsoleOutputHandler{
 
     private static final long SPELL_DELAY = 30;
 
+    private void ConsoleOutputHandler(){
+        //this class is intended to be static and not instanced.
+    }
+    
     //output the provided string in one line, character by character
     public static void spell(String input) {
         for(int i = 0; i < input.length(); i++) {

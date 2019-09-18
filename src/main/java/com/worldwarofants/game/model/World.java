@@ -18,7 +18,7 @@ import com.worldwarofants.game.model.Player;
  */
 public class World {
 
-    public Player player;
+    private Player player;
     private boolean isGameRunning = true;
 
     public World(){
@@ -40,5 +40,9 @@ public class World {
      */
     public void gameOver() {
         isGameRunning = false;
+    }
+
+    public Player getPlayer(){
+        return player;
     }
 }

@@ -3,9 +3,9 @@ package com.worldwarofants.game.module.startmenu;
 import com.worldwarofants.game.arch.AbstractView;
 import com.worldwarofants.game.arch.console.ConsoleOutputHandler;
 
-public class StartMenuView extends AbstractView<StartMenuViewModel> {
+public class StartMenuView extends AbstractView<StartMenuModel> {
 
-	public StartMenuView(StartMenuViewModel viewModel) {
+	public StartMenuView(StartMenuModel viewModel) {
 		super(viewModel);
 	}
 	

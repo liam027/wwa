@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ConsoleOutputHandler{
 
-    private static final long SPELL_DELAY = 100;
+    private static final long SPELL_DELAY = 30;
 
     //output the provided string in one line, character by character
     public static void spell(String input) {
@@ -15,7 +15,7 @@ public class ConsoleOutputHandler{
             }
             catch(InterruptedException e) {
                 //if interrupted, clear the interrupt flag and continue
-                Thread.currentThread().interrupt();              
+                Thread.currentThread().interrupt();
             }
         }
     }

@@ -27,7 +27,7 @@ public abstract class AbstractModule<CommandHandler extends AbstractCommandHandl
     public AbstractModule(World world, IModuleNavigator navigator) {
         this.world = world;
         this.navigator = navigator;
-        commandHandler = initDependencies(world);
+        commandHandler = initDependencies();
     }
 
     /**
@@ -36,7 +36,7 @@ public abstract class AbstractModule<CommandHandler extends AbstractCommandHandl
      * In it, you have to create a ViewModel, View, Controller, and a CommandHandler.
      * Then you just return that command handler.
      */
-    protected abstract CommandHandler initDependencies(World _world);
+    protected abstract CommandHandler initDependencies();
 
     /**
      * This method runs whenever you navigate to a module.

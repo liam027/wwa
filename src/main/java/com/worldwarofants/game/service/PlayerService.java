@@ -11,6 +11,6 @@ public class PlayerService {
     private Player player;
 
     public PlayerService(World world) {
-        player = world.player;
+        player = world.getPlayer();
     }
 }

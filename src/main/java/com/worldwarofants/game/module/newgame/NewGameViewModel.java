@@ -5,9 +5,4 @@ import com.worldwarofants.game.model.World;
 
 public class NewGameViewModel implements IViewModel {
 
-    public World world;
-
-    public NewGameViewModel(World world){
-        this.world = world;
-    }
 }

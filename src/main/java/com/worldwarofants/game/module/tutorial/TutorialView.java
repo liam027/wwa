@@ -11,7 +11,7 @@ public class TutorialView extends AbstractView<TutorialViewModel> {
 
 	public void renderTutorialScreenStart() {
 		ConsoleOutputHandler.lineBreak();
-		ConsoleOutputHandler.postPlayerAttributes(getViewModel().world.player);
+		//ConsoleOutputHandler.postPlayerAttributes();
 		ConsoleOutputHandler.spell("Your colony is under attack! You are on the brink of defeat and you must fall back in order to avoid complete annihilation! ...");
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.post("* Continue the fight! - 'fight'");

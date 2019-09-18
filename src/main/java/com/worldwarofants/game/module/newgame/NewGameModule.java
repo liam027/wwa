@@ -12,8 +12,8 @@ public class NewGameModule extends AbstractModule<NewGameCommandHandler> {
 	}
 
 	@Override
-	protected NewGameCommandHandler initDependencies(World world) {
-		NewGameViewModel viewModel = new NewGameViewModel(world);
+	protected NewGameCommandHandler initDependencies() {
+		NewGameViewModel viewModel = new NewGameViewModel();
 		NewGameView view = new NewGameView(viewModel);
 		NewGameController controller = new NewGameController(view, navigator);
 		return new NewGameCommandHandler(controller);

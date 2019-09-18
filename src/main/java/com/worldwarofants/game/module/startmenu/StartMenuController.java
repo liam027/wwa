@@ -20,6 +20,6 @@ public class StartMenuController extends AbstractController<StartMenuView> {
 	}
 
 	public void exitGame(){
-		System.exit(0);
+		//TO-DO: exit the game using world.gameOver(); 
 	}
 }

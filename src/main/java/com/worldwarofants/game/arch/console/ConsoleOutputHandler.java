@@ -1,6 +1,7 @@
 package com.worldwarofants.game.arch.console;
 
 import java.util.concurrent.TimeUnit;
+import com.worldwarofants.game.model.Player;
 
 public class ConsoleOutputHandler{
 
@@ -27,4 +28,10 @@ public class ConsoleOutputHandler{
     public static void lineBreak() {
         System.out.println(); 
     }
+
+    public static void postPlayerAttributes(Player player) {
+        String playerAttributes = String.format("[POPULATION: %s][HITPOINTS: %s][FOOD: %s][RESOURCES: %s]", player.population, player.hitPoints, player.food, player.resources);
+        System.out.println(playerAttributes); 
+    }
+
 }

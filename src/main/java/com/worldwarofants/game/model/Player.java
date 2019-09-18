@@ -5,10 +5,10 @@ package com.worldwarofants.game.model;
  */
 public class Player {
 
-    private int population;
-    private int hitPoints;
-    private int food;
-    private int resources;
+    public int population;
+    public int hitPoints;
+    public int food;
+    public int resources;
 
     public Player() {
         this.population = 350;

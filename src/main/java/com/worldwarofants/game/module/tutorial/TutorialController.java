@@ -10,7 +10,20 @@ public class TutorialController extends AbstractController<TutorialView> {
 		super(view, navigator);
 	}
 
-	public void showTutorialScreen() {
+	public void showTutorialScreenStart() {
+		view.renderTutorialScreenStart();
+	}
+
+	public void continueTheFight(){
+
+	}
+
+	public void fallBack(){
+
+	}
+
+	//quit back to main menu
+	public void quit(){
 		
 	}
 

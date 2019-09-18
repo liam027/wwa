@@ -9,7 +9,7 @@ import com.worldwarofants.game.module.ModuleName;
 public class NewGameCommandHandler extends AbstractCommandHandler<NewGameController> {
 	
 	public static final String COMMAND_SHOW_NEW_GAME_SCREEN = "showNewGameScreen";
-	public static final String COMMAND_START_NEW_GAME = "start";
+	public static final String COMMAND_START_NEW_GAME = "new";
 	public static final String COMMAND_BACK = "back";
 
 	public NewGameCommandHandler(NewGameController controller) {

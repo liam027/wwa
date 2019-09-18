@@ -8,7 +8,7 @@ import com.worldwarofants.game.module.ModuleName;
 public class TutorialCommandHandler extends AbstractCommandHandler<TutorialController> {
 	
 	public static final String COMMAND_SHOW_TUTORIAL_SCREEN_START = "showTutorialScreenStart";
-	public static final String COMMAND_CONTINUE = "continue";
+	public static final String COMMAND_CONTINUE = "fight";
 	public static final String COMMAND_FALLBACK = "fallBack";
 	public static final String COMMAND_QUIT = "quit";
 

@@ -15,16 +15,18 @@ public class TutorialController extends AbstractController<TutorialView> {
 	}
 
 	public void continueTheFight(){
-
+		view.renderTutorialScreenContinue();
+		quit();
 	}
 
 	public void fallBack(){
-
+		view.renderTutorialScreenFallBack();
 	}
 
-	//quit back to main menu
+	//return to main menu
 	public void quit(){
-		
+		String[] args = new String[0];
+		moduleNavigator.navigateTo(ModuleName.START_MENU, args);
 	}
 
 }

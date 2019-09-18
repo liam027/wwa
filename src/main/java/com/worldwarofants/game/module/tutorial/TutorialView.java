@@ -21,6 +21,10 @@ public class TutorialView extends AbstractView<TutorialViewModel> {
 	}
 
 	public void renderTutorialScreenContinue() {
+		ConsoleOutputHandler.spell("Your entire colony has been overrun and annihilated; a colony with such a low POPULATION is no match for an enemy of this size!");
+	}
 
+	public void renderTutorialScreenFallBack() {
+		ConsoleOutputHandler.spell("You made the right decision!");
 	}
 }

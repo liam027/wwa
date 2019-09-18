@@ -12,8 +12,8 @@ public class TutorialModule extends AbstractModule<TutorialCommandHandler> {
 	}
 
 	@Override
-	protected TutorialCommandHandler initDependencies(World _world) {
-		TutorialViewModel viewModel = new TutorialViewModel(_world);
+	protected TutorialCommandHandler initDependencies(World world) {
+		TutorialViewModel viewModel = new TutorialViewModel(world);
 		TutorialView view = new TutorialView(viewModel);
 		TutorialController controller = new TutorialController(view, navigator);
 		return new TutorialCommandHandler(controller);

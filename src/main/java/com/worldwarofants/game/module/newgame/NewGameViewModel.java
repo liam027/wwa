@@ -7,7 +7,7 @@ public class NewGameViewModel implements IViewModel {
 
     public World world;
 
-    public NewGameViewModel(World _world){
-        world = _world;
+    public NewGameViewModel(World world){
+        this.world = world;
     }
 }

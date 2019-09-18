@@ -7,7 +7,7 @@ public class TutorialViewModel implements IViewModel {
     
     public World world;
 
-    public TutorialViewModel(World _world){
-        world = _world;
+    public TutorialViewModel(World world){
+        this.world = world;
     }
 }

@@ -6,7 +6,7 @@ public class StartMenuViewModel implements IViewModel {
    
     public World world;
 
-    public StartMenuViewModel(World _world){
-        world = _world;
+    public StartMenuViewModel(World world){
+        this.world = world;
     }
 }

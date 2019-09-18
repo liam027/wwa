@@ -4,6 +4,7 @@ import java.util.Map;
 import com.worldwarofants.game.arch.console.command.AbstractCommandHandler;
 import com.worldwarofants.game.arch.console.command.ICommand;
 import com.worldwarofants.game.module.ModuleName;
+import com.worldwarofants.game.service.PlayerService;
 
 public class TutorialCommandHandler extends AbstractCommandHandler<TutorialController> {
 	

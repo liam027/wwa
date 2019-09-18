@@ -29,9 +29,4 @@ public class ConsoleOutputHandler{
         System.out.println(); 
     }
 
-    public static void postPlayerAttributes(Player player) {
-        String playerAttributes = String.format("[POPULATION: %s][HITPOINTS: %s][FOOD: %s][RESOURCES: %s]", player.population, player.hitPoints, player.food, player.resources);
-        System.out.println(playerAttributes); 
-    }
-
 }

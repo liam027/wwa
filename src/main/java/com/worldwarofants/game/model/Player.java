@@ -1,20 +1,19 @@
 package com.worldwarofants.game.model;
 
+import java.util.Map;
+import java.util.HashMap;
 /**
  * This si the player class to handle the player's resources.
  */
 public class Player {
 
-    public int population;
-    public int hitPoints;
-    public int food;
-    public int resources;
+    public HashMap<String, Integer> attributes = new HashMap<String, Integer>();
+    public int number;
 
     public Player() {
-        this.population = 350;
-        this.hitPoints = 10;
-        this.food = 18;
-        this.resources = 0;
+        this.attributes.put("population",350);
+        this.attributes.put("hitPoints",10);
+        this.attributes.put("food",18);
+        this.attributes.put("resources",0);
     }
-
 }

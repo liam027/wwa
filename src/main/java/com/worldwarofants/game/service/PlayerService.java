@@ -1,5 +1,7 @@
 package com.worldwarofants.game.service;
 
+import java.util.Map;
+import java.util.HashMap;
 import com.worldwarofants.game.model.World;
 import com.worldwarofants.game.model.Player;
 
@@ -12,5 +14,9 @@ public class PlayerService {
 
     public PlayerService(World world) {
         player = world.getPlayer();
+    }
+
+    public HashMap<String, Integer> getPlayerAttributes(){
+        return player.attributes;
     }
 }

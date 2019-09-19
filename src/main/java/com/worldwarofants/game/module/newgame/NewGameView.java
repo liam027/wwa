@@ -17,7 +17,7 @@ public class NewGameView extends AbstractView<NewGameViewModel> {
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.post(startGamePrompt);
 		ConsoleOutputHandler.post(backPrompt);
-		ConsoleOutputHandler.lineBreak();;
+		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.post("Please enter your command:");
 	}
 }

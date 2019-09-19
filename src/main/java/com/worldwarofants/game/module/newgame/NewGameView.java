@@ -10,11 +10,13 @@ public class NewGameView extends AbstractView<NewGameViewModel> {
 	}
 
 	public void renderNewGameScreen() {
+		String startGamePrompt = String.format("* Start Game - %s ", NewGameCommandHandler.COMMAND_START_NEW_GAME);
+		String backPrompt = String.format("* Back - %s ", NewGameCommandHandler.COMMAND_BACK);
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.spell("-- GAME SETUP --");
 		ConsoleOutputHandler.lineBreak();
-		ConsoleOutputHandler.post("* Start Game - 'startGame'");
-		ConsoleOutputHandler.post("* Back - 'back'");
+		ConsoleOutputHandler.post(startGamePrompt);
+		ConsoleOutputHandler.post(backPrompt);
 		ConsoleOutputHandler.lineBreak();;
 		ConsoleOutputHandler.post("Please enter your command:");
 	}

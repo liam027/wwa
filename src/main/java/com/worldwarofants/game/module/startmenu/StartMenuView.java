@@ -10,11 +10,13 @@ public class StartMenuView extends AbstractView<StartMenuViewModel> {
 	}
 	
 	public void renderStartMenuScreen() {
+		String newGamePrompt = String.format("* New Game - %s ", StartMenuCommandHandler.COMMAND_NEW_GAME);
+		String exitPrompt = String.format("* Exit - %s ", StartMenuCommandHandler.COMMAND_EXIT_GAME);
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.spell("-- WORLD WAR OF ANTS --");
 		ConsoleOutputHandler.lineBreak();
-		ConsoleOutputHandler.post("* New Game - 'newGame'");
-		ConsoleOutputHandler.post("* Exit - 'exit'");
+		ConsoleOutputHandler.post(newGamePrompt);
+		ConsoleOutputHandler.post(exitPrompt);
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.post("Please enter your command:");
 	}

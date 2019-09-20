@@ -1,7 +1,7 @@
 package com.worldwarofants.game.service;
 
 import java.util.HashMap;
-import com.worldwarofants.game.model.World;
+import com.worldwarofants.game.model.Player;
 
 /**
  * <p>This is an example Service class.
@@ -16,19 +16,14 @@ import com.worldwarofants.game.model.World;
  */
 public class PlayerService {
 
-    public PlayerService(Player player) {
+    Player player;
 
+    public PlayerService(Player _player) {
+        this.player = _player;
     }
 
-    /**
-     * return the four core player attributes as a hashmap of <"attribute name", value>
-     */
-    public HashMap<String, Integer> getPlayerAttributes() {
-        HashMap<String, Integer> attributeHashMap = new HashMap<String, Integer>();
-        attributeHashMap.put("population", this.population);
-        attributeHashMap.put("hitPoints", this.hitPoints);
-        attributeHashMap.put("food", this.food);
-        attributeHashMap.put("resources", this.resources);
-        return attributeHashMap;
+    public HashMap<String, Integer> getAttributes() {
+        return player.getAttributes();
     }
+
 }

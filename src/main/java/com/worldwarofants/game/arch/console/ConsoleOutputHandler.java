@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 public class ConsoleOutputHandler{
 
-
     private static final long SPELL_DELAY = 15;
 
     private void ConsoleOutputHandler(){

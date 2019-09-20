@@ -1,20 +1,29 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. 
+To be able to take part in this project, you will have to be familiar with Git, and some of the terminologies like `pull, commit, push, repository, branch, fork, pull request`. It's quite a handful, but it's very important. If you're looking for resources on this topic, here's [one youtube playlist](https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR), and [here's another one](https://www.youtube.com/watch?v=xAAmje1H9YM&list=PLeo1K3hjS3usJuxZZUBdjAcilgfQHkRzW&index=1).
 
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+## A Guide on how to contribute
+1. When contributing to this repository, it is advised to first discuss the change you wish to make in our [Discord](https://discord.gg/MN5kTkb) or in the relevant issue, before making a change.
 
-## How to contribute
-1. Ask your team manager to get a task assigned on the Trello board
-2. Clone / update the forked repo that belongs to your team
-3. Developers can create branches as they see fit in the fork
-4. Write the feature / solve the bug
-5. Developers should then give their final branch an internal review
-    - Ensure tests are written
-    - Ensure that Travis build is passing
-    - Rebase / squash the commits as you see fit
-    - Ensure that the commit have talking names
-    - No build / intermediate / unwanted files are committed
-6. Create a PR from your branch to the main wwa repo
-7. Follow the discussion on the PR and, if necessary, do the requested changes
+2. Assign yourself to the issue you wish to contribute to. 
+    - If such an issue does not exist, create it, and assign yourself to it. 
+    - If you do not have the rights to do any of that, it is likely that you are not in the organization's team. Send us a message in Discord so we can add you.
+
+3. Find an existing fork of this repository.
+    - If a relevant fork does not exist, create your own. Make sure to mention it in the issue, so other people can contribute to it as well. 
+    - Only make forks of the main WWA repository! Avoid making forks of already existing forks! This is viable if you are familiar with Git, but it only complicates things and adds more unnecessary steps. Because your code will have to travel from your fork > to the fork you forked > to the main repo of WWA. Instead of simply one fork > to WWA.
+
+4. Create a branch for the issue you're working on in your fork.
+    - Avoid directly pushing changes to the master or development branches! Those branches should be locked, and only susceptible to change through pull requests.
+
+5. Once you think you have completed the task, submit a pull request from your branch to the development branch of the fork. 
+
+6. Invite some Mentors from the Discord to take a look at your pull request.
+
+7. The Mentors will review it by leaving remarks, comments, and ways to improve the code. 
+
+8. After you've resolved the remarks, and they cannot find any more flaws, they will approve the pull request, and it will be merged into the development branch of the fork. 
+
+8. When the development branch has all the necessary code for the feature you assigned yourself to, you can create another pull request to the main WWA repository's development branch. 
+
+And that is it! By this step, you should have successfully made your first contribution to the WWA project!

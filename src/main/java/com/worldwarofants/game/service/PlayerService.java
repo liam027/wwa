@@ -22,8 +22,9 @@ public class PlayerService {
         this.player = _player;
     }
 
-    public HashMap<String, Integer> getAttributes() {
-        return player.getAttributes();
+    public String formatAttributes() {
+        //TO-DO 
+        return "";
     }
 
 }

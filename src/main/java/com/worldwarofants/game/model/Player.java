@@ -19,16 +19,4 @@ public class Player {
         this.resources = 0;
     }
 
-    /**
-     * return the four core player attributes as a hashmap of <"attribute name", value>
-     */
-    public HashMap<String, Integer> getPlayerAttributes(){
-        HashMap<String, Integer> attributeHashMap = new HashMap<String, Integer>();
-        attributeHashMap.put("population", this.population);
-        attributeHashMap.put("hitPoints", this.hitPoints);
-        attributeHashMap.put("food", this.food);
-        attributeHashMap.put("resources", this.resources);
-        return attributeHashMap;
-    }
-
 }

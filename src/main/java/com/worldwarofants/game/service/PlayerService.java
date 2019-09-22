@@ -16,7 +16,7 @@ public class PlayerService {
         player = world.getPlayer();
     }
 
-    public HashMap<String, Integer> getPlayerAttributes(){
-        return player.attributes;
-    }
+    //public HashMap<String, Integer> getPlayerAttributes(){
+        //TODO return player.attributes;
+    //}
 }

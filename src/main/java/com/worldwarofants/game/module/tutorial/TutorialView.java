@@ -1,45 +1,39 @@
 package com.worldwarofants.game.module.tutorial;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.worldwarofants.game.arch.AbstractView;
 import com.worldwarofants.game.arch.console.ConsoleOutputHandler;
-import com.worldwarofants.game.service.PlayerService;
+
 public class TutorialView extends AbstractView<TutorialViewModel> {
 
+	private static final String START_MESSAGE = "Your colony is under attack! You are on the brink of defeat and you must fall back in order to avoid complete annihilation! ...";
+	private static final String FIGHT_MESSAGE = "Your entire colony has been overrun and annihilated; a colony with such a low POPULATION is no match for an enemy of this size!";
+	private static final String RETREAT_MESSAGE = "You made the right decision!";
+	private static final String FIGHT_DESC = "Fight";
+	private static final String RETREAT_DESC = "Retreat";
+	private static final String QUIT_DESC = "Quit";
+	
 	public TutorialView(TutorialViewModel viewModel) {
 		super(viewModel);
 	}
 
-	public void renderTutorialScreenStart(PlayerService _playerService) {
-		String playerAttributesString = listPlayerAttributes(_playerService.getPlayerAttributes());
-		ConsoleOutputHandler.post("-- TUTORIAL -- ");
+	public void renderTutorialScreenStart() {
 		ConsoleOutputHandler.lineBreak();
-		ConsoleOutputHandler.post(playerAttributesString);
-		ConsoleOutputHandler.spell("Your colony is under attack! You are on the brink of defeat and you must fall back in order to avoid complete annihilation! ...");
+		ConsoleOutputHandler.spell(START_MESSAGE);
 		ConsoleOutputHandler.lineBreak();
-		ConsoleOutputHandler.post("* Continue the fight! - 'fight'");
-		ConsoleOutputHandler.post("* Fall back! - 'fallBack'");
-		ConsoleOutputHandler.post("* Quit - 'quit'");
-		ConsoleOutputHandler.lineBreak();;
-		ConsoleOutputHandler.post("Please enter your command:");
+		ConsoleOutputHandler.postCommand(FIGHT_DESC, TutorialCommandHandler.COMMAND_FIGHT);
+		ConsoleOutputHandler.postCommand(RETREAT_DESC, TutorialCommandHandler.COMMAND_RETREAT);
+		ConsoleOutputHandler.postCommand(QUIT_DESC, TutorialCommandHandler.COMMAND_QUIT);
+		ConsoleOutputHandler.lineBreak();
+		ConsoleOutputHandler.promptInput();
 	}
 
-	public void renderTutorialScreenContinue() {
-		ConsoleOutputHandler.spell("Your entire colony has been overrun and annihilated; a colony with such a low POPULATION is no match for an enemy of this size!");
+	public void renderTutorialScreenFight() {
+		//TODO this ends the game.
+		ConsoleOutputHandler.spell(FIGHT_MESSAGE);
 	}
 
-	public void renderTutorialScreenFallBack() {
-		ConsoleOutputHandler.spell("You made the right decision!");
+	public void renderTutorialScreenRetreat() {
+		//TODO this is currently a dead end
+		ConsoleOutputHandler.spell(RETREAT_MESSAGE);
 	}
-
-	public String listPlayerAttributes(HashMap<String, Integer> attributes){
-        String output = "";
-        for ( Map.Entry<String, Integer> entry : attributes.entrySet() ) {
-            String key = entry.getKey().toUpperCase();
-            Integer value = entry.getValue();
-            output += String.format("[%s:%s]", key, value);
-        }
-        return output;
-    }
 }

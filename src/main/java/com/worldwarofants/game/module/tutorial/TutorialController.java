@@ -1,17 +1,23 @@
 package com.worldwarofants.game.module.tutorial;
 
+import java.util.HashMap;
 import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.module.IModuleNavigator;
 import com.worldwarofants.game.module.ModuleName;
+import com.worldwarofants.game.service.PlayerService;
 
 public class TutorialController extends AbstractController<TutorialView> {
 
-	public TutorialController(TutorialView view, IModuleNavigator navigator) {
+	public PlayerService playerService;
+
+	public TutorialController(TutorialView view, IModuleNavigator navigator, PlayerService _playerService) {
 		super(view, navigator);
+		playerService = _playerService;
 	}
 
 	public void showTutorialScreenStart() {
-		view.renderTutorialScreenStart();
+		HashMap<String, Integer> playerAttributes = playerService.getPlayerAttributesHash();
+		view.renderTutorialScreenStart(playerAttributes);
 	}
 
 	public void fight(){

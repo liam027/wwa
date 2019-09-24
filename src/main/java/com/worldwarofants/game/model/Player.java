@@ -7,7 +7,6 @@ public class Player {
     //need other army teams as enemies. Potentially make a super
     //class "AntTeam" or something that player and opponents can extend
     //from?
-   
     private final static int STARTING_POPULATION = 350;
     private final static int STARTING_HIT_POINTS = 10;
     private final static int STARTING_FOOD = 18;
@@ -21,23 +20,22 @@ public class Player {
     private int resources;
 
     public Player() {
-        
         this.population = STARTING_POPULATION;
         this.hitPoints = STARTING_HIT_POINTS;
         this.food = STARTING_FOOD;
         this.resources = STARTING_RESOURCES;
     }
 
-    public int getPopulation(){
+    public int getPopulation() {
         return this.population;
     }
-    public int getHitPoints(){
+    public int getHitPoints() {
         return this.hitPoints;
     }
-    public int getFood(){
+    public int getFood() {
         return this.food;
     }
-    public int getResources(){
+    public int getResources() {
         return this.resources;
     }
 }

@@ -8,11 +8,11 @@ import com.worldwarofants.game.service.PlayerService;
 
 public class TutorialController extends AbstractController<TutorialView> {
 
-	public PlayerService playerService;
+	private final PlayerService playerService;
 
-	public TutorialController(TutorialView view, IModuleNavigator navigator, PlayerService _playerService) {
+	public TutorialController(TutorialView view, IModuleNavigator navigator, PlayerService playerService) {
 		super(view, navigator);
-		playerService = _playerService;
+		this.playerService = playerService;
 	}
 
 	public void showTutorialScreenStart() {

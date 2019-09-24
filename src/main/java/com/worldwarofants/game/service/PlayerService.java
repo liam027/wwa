@@ -1,12 +1,11 @@
 package com.worldwarofants.game.service;
 
-import java.util.Map;
 import java.util.HashMap;
 import com.worldwarofants.game.model.World;
 import com.worldwarofants.game.model.Player;
 
 /**
-* Provides service for accessing player data
+* Provides the service to access player data
  */
 public class PlayerService {
 
@@ -16,7 +15,16 @@ public class PlayerService {
         player = world.getPlayer();
     }
 
-    //public HashMap<String, Integer> getPlayerAttributes(){
-        //TODO return player.attributes;
-    //}
+    /**
+     * returns the four core player attributes as a hashmap of <"attribute name", value>
+     */
+    public HashMap<String, Integer> getPlayerAttributesHash() {
+        //TODO what stats are included in this TBD
+        HashMap<String, Integer> playerAttributes = new HashMap<String, Integer>();
+        playerAttributes.put("population", player.getPopulation());
+        playerAttributes.put("hitPoints", player.getHitPoints());
+        playerAttributes.put("food", player.getFood());
+        playerAttributes.put("resources", player.getResources());
+        return playerAttributes;
+    }
 }

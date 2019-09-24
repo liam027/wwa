@@ -1,7 +1,6 @@
 package com.worldwarofants.game.arch.console;
 
 import java.util.concurrent.TimeUnit;
-import com.worldwarofants.game.model.Player;
 
 public class ConsoleOutputHandler{
 

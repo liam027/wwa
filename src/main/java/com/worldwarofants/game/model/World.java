@@ -1,6 +1,7 @@
 package com.worldwarofants.game.model;
 
 import com.worldwarofants.game.ConsoleGame;
+import com.worldwarofants.game.model.Player;
 
 /**
  * <p>
@@ -17,8 +18,12 @@ import com.worldwarofants.game.ConsoleGame;
  */
 public class World {
 
+    private Player player;
     private boolean isGameRunning = true;
 
+    public World(){
+        player = new Player();
+    }
     /**
      * This is used in the main game loop to check if it should keep looping.
      *
@@ -35,5 +40,9 @@ public class World {
      */
     public void gameOver() {
         isGameRunning = false;
+    }
+
+    public Player getPlayer(){
+        return player;
     }
 }

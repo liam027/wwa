@@ -1,5 +1,6 @@
 package com.worldwarofants.game.module.tutorial;
 
+import java.util.HashMap;
 import com.worldwarofants.game.arch.AbstractView;
 import com.worldwarofants.game.arch.console.ConsoleOutputHandler;
 
@@ -16,8 +17,9 @@ public class TutorialView extends AbstractView<TutorialViewModel> {
 		super(viewModel);
 	}
 
-	public void renderTutorialScreenStart() {
+	public void renderTutorialScreenStart(HashMap<String, Integer> playerAttributes) {
 		ConsoleOutputHandler.lineBreak();
+		ConsoleOutputHandler.post(getViewModel().formatPlayerAttributes(playerAttributes));
 		ConsoleOutputHandler.spell(START_MESSAGE);
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.postCommand(FIGHT_DESC, TutorialCommandHandler.COMMAND_FIGHT);

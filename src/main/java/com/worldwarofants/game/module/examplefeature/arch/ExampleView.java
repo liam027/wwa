@@ -1,6 +1,7 @@
 package com.worldwarofants.game.module.examplefeature.arch;
 
 import com.worldwarofants.game.arch.AbstractView;
+import com.worldwarofants.game.ConsoleUI;
 
 class ExampleView extends AbstractView<ExampleViewModel> {
 
@@ -9,8 +10,8 @@ class ExampleView extends AbstractView<ExampleViewModel> {
     // Also that way they will be divided by what screen they are used in.
     private static final String GAME_TITLE = "WORLD WAR OF ANTS";
 
-    ExampleView(ExampleViewModel viewModel) {
-        super(viewModel);
+    ExampleView(ExampleViewModel viewModel, ConsoleUI ui) {
+        super(viewModel, ui);
     }
 
     public void showAllAnts() {

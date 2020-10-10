@@ -4,6 +4,7 @@ import com.worldwarofants.game.module.ModuleName;
 import com.worldwarofants.game.arch.console.command.AbstractCommandHandler;
 import com.worldwarofants.game.arch.console.command.ICommand;
 import com.worldwarofants.game.model.World;
+import com.worldwarofants.game.ConsoleUI;
 
 /**
  * <p>
@@ -23,10 +24,12 @@ public abstract class AbstractModule<CommandHandler extends AbstractCommandHandl
     private CommandHandler commandHandler;
     protected World world;
     protected IModuleNavigator navigator;
+    protected ConsoleUI ui;
 
-    public AbstractModule(World world, IModuleNavigator navigator) {
+    public AbstractModule(World world, IModuleNavigator navigator, ConsoleUI ui) {
         this.world = world;
         this.navigator = navigator;
+        this.ui = ui;
         commandHandler = initDependencies();
     }
 

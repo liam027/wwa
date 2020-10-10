@@ -2,6 +2,7 @@ package com.worldwarofants.game.module.newgame;
 
 import com.worldwarofants.game.arch.AbstractView;
 import com.worldwarofants.game.arch.console.ConsoleOutputHandler;
+import com.worldwarofants.game.ConsoleUI;
 
 public class NewGameView extends AbstractView<NewGameViewModel> {
 
@@ -9,8 +10,8 @@ public class NewGameView extends AbstractView<NewGameViewModel> {
 	private static final String BACK_DESC = "Back";
 	private static final String TITLE = "GAME SETUP";
 	
-	public NewGameView(NewGameViewModel viewModel) {
-		super(viewModel);
+	public NewGameView(NewGameViewModel viewModel, ConsoleUI ui) {
+		super(viewModel, ui);
 	}
 
 	public void renderNewGameScreen() {

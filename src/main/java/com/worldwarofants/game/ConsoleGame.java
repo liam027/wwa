@@ -1,5 +1,6 @@
 package com.worldwarofants.game;
 
+import java.io.IOException;
 import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.module.AbstractModule;
 import com.worldwarofants.game.arch.module.ModuleManager;
@@ -8,6 +9,10 @@ import com.worldwarofants.game.module.startmenu.StartMenuModule;
 import com.worldwarofants.game.module.newgame.NewGameModule;
 import com.worldwarofants.game.module.tutorial.TutorialModule;
 import com.worldwarofants.game.model.World;
+import com.worldwarofants.game.ConsoleUI;
+import com.googlecode.lanterna.input.KeyStroke;
+import com.googlecode.lanterna.input.KeyType;
+
 import java.util.Scanner;
 
 /**
@@ -21,11 +26,11 @@ public class ConsoleGame extends ModuleManager {
 
     public static final String COMMAND_SHOW_GAME_TITLE = "showTitle";
 
-    private final Scanner scanner;
+    private final ConsoleUI consoleUI;
     private World world;
 
-    ConsoleGame() {
-        scanner = new Scanner(System.in);
+    ConsoleGame() throws IOException  {
+        consoleUI = new ConsoleUI();
     }
 
     /**
@@ -43,13 +48,17 @@ public class ConsoleGame extends ModuleManager {
         while (world.isGameRunning()) {
             // This is how to let the user execute commands.
             // Nothing else will need to be added here.
-            currentModule.executeCommand(readInput());
+            //KeyStroke input = consoleUI.terminal.readInput();
+            //if(input.getKeyType() != KeyType.Enter) {
+               // consoleUI.terminal.putCharacter(input.getCharacter());
+            //}
+            //currentModule.executeCommand();
         }
     }
 
     @Override
     protected AbstractModule defineStartingModule(IModuleNavigator navigator) {
-        return new StartMenuModule(world, navigator);
+        return new StartMenuModule(world, navigator, consoleUI);
     }
 
     @Override
@@ -61,9 +70,5 @@ public class ConsoleGame extends ModuleManager {
     @Override
     protected void initDatabase() {
         world = new World();
-    }
-
-    private String readInput() {
-        return scanner.nextLine().trim();
     }
 }
